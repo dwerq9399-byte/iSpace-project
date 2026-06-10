@@ -1,0 +1,306 @@
+/* ==========================================================================
+   1. ОБЩИЕ СТИЛИ (ТЁМНАЯ ТЕМА)
+   ========================================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #1a1a1a; /* Глубокий тёмный фон сайта */
+    color: #eeeeee; /* Светло-серый текст, приятный для глаз */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+/* ==========================================================================
+   2. ШАПКА САЙТА (FLEXBOX)
+   ========================================================================== */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #111111; /* Почти чёрная шапка */
+    padding: 15px 30px;
+    color: #fff;
+    border-bottom: 1px solid #333;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff9900; /* Акцентный логотип */
+}
+
+.nav a {
+    color: #ccc;
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+}
+
+/* Эффект наведения в шапке */
+.nav a:hover, .footer-links a:hover, .socials a:hover {
+    color: #fff;
+    background-color: rgba(255, 153, 0, 0.2); /* Оранжевое свечение вокруг ссылки */
+    border-radius: 4px;
+}
+
+.nav a.active {
+    color: #fff;
+    border-bottom: 2px solid #ff9900;
+}
+
+/* ==========================================================================
+   3. СТРУКТУРНЫЕ БЛОКИ КОНТЕНТА
+   ========================================================================== */
+.hero-section, .features-section, .auth-section, .catalog-section, 
+.feedback-section, .info-block, .profile-section, .user-data-section, 
+.help-section, .faq-section {
+    background: #242424; /* Тёмно-серые блоки контента */
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* Более глубокие тени для объёма */
+    border: 1px solid #2d2d2d;
+}
+
+/* Изменение заголовков на страницах */
+h1, h2, h3 {
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+/* ==========================================================================
+   4. СЕТКА ДЛЯ КАРТОЧЕК ТОВАРОВ
+   ========================================================================== */
+.grid-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 20px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.grid-item, .product-card {
+    background: #1e1e1e; /* Карточки чуть темнее основного блока */
+    padding: 20px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    text-align: center;
+    width: 300px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.2);
+}
+
+.product-card p {
+    color: #ff9900; /* Ценники выделены оранжевым */
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.product-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    background-color: #282828; /* Фон под картинками, чтобы скрыть белые края */
+    padding: 5px;
+}
+
+/* ==========================================================================
+   5. ФОРМЫ, КНОПКИ И ПОЛЯ ВВОДА
+   ========================================================================== */
+.btn {
+    background-color: #ff9900;
+    color: #111; /* Тёмный текст на оранжевой кнопке */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: all 0.3s;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: #fff;
+    color: #ff9900; /* Переворот цветов при наведении */
+}
+
+.reg-form, .help-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+/* Тёмные поля ввода */
+.reg-form input, .help-form select, .help-form textarea {
+    padding: 10px;
+    background-color: #1a1a1a;
+    border: 1px solid #444;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.reg-form input:focus, .help-form select:focus, .help-form textarea:focus {
+    outline: none;
+    border-color: #ff9900; /* Подсветка активного поля */
+}
+
+/* ==========================================================================
+   6. СТРАНИЦА ОТЗЫВОВ И ЛИЧНЫЙ КАБИНЕТ
+   ========================================================================== */
+.feedback-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.review-card {
+    display: flex;
+    gap: 15px;
+    background: #1e1e1e;
+    padding: 15px;
+    border-left: 5px solid #555;
+    border-radius: 4px;
+    align-items: center;
+}
+
+.review-card.positive { border-left-color: #2ecc71; }
+.review-card.negative { border-left-color: #e74c3c; }
+
+.review-card img {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+
+.profile-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-avatar {
+    border-radius: 50%;
+    width: 100px;
+    border: 2px solid #ff9900;
+}
+
+.user-data-section {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.history-block, .my-reviews-block {
+    flex: 1;
+    min-width: 250px;
+}
+
+.history-block ul {
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.mini-review {
+    margin-top: 10px;
+    padding: 10px;
+    background: #1a1a1a;
+    border-radius: 4px;
+    border: 1px solid #333;
+}
+
+/* ==========================================================================
+   7. JAVASCRIPT FAQ И ПОДВАЛ
+   ========================================================================== */
+.hidden { display: none; }
+
+.faq-toggle {
+    background: none;
+    border: none;
+    color: #ff9900; /* Ссылка FAQ стала оранжевой */
+    cursor: pointer;
+    font-size: 16px;
+    text-align: left;
+    padding: 10px 0;
+}
+
+.faq-toggle:hover { text-decoration: underline; color: #fff; }
+
+.faq-content {
+    padding: 15px;
+    background: #1a1a1a;
+    border-radius: 4px;
+    margin-top: 5px;
+    border: 1px solid #333;
+}
+
+.footer {
+    background-color: #0b0b0b; /* Самый тёмный подвал */
+    color: #888;
+    padding: 20px 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-top: auto;
+    border-top: 1px solid #222;
+}
+
+.footer-links a, .socials a {
+    color: #888;
+    text-decoration: none;
+    margin-right: 15px;
+    font-size: 14px;
+}
+
+/* ==========================================================================
+   8. АДАПТИВНОСТЬ ПОД МОБИЛЬНЫЕ УСТРОЙСТВА
+   ========================================================================== */
+@media (max-width: 768px) {
+    .header, .footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .nav a {
+        margin-left: 0;
+    }
+
+    .profile-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .grid-container {
+        justify-content: center;
+    }
+
+    .grid-item, .product-card {
+        width: 100%;
+    }
+}
