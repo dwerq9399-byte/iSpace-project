@@ -2,15 +2,14 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная страница</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="header">
-        <div class="logo">iSpace</div>
-        <nav class="nav">
-            <a href="index.html" class="active">Главная</a>
+    <header>
+        <div>Мой Магазин</div>
+        <nav>
+            <a href="index.html">Главная</a>
             <a href="catalog.html">Каталог</a>
             <a href="feedback.html">Отзывы</a>
             <a href="akk.html">Кабинет</a>
@@ -18,50 +17,23 @@
         </nav>
     </header>
 
-    <main>
-        <!-- Блок контента 1 -->
-        <section class="hero-section">
-            <h1>Добро пожаловать на наш сайт!</h1>
-            <p>Мы предлагаем лучшие решения для вашего бизнеса и повседневной жизни.</p>
-        </section>
-
-        <!-- Блок контента 2 -->
-        <section class="features-section">
-            <h2>Наши преимущества</h2>
-            <div class="grid-container">
-                <div class="grid-item">Качество</div>
-                <div class="grid-item">Скорость</div>
-                <div class="grid-item">Надежность</div>
-            </div>
-        </section>
-
-        <!-- Блок контента 3 + Форма регистрации перед подвалом -->
-        <section class="auth-section">
-            <h2>Регистрация на сайте</h2>
-            <form class="reg-form" onsubmit="alert('Вы успешно зарегистрировались!'); return false;">
-                <input type="email" placeholder="Email" required>
-                <input type="password" placeholder="Пароль" required>
-                <input type="password" placeholder="Повторите пароль" required>
-                <button type="submit" class="btn">Зарегистрироваться</button>
+    <main class="container">
+        <section class="review-card"><h2>Добро пожаловать!</h2><p>Лучший магазин электроники в городе.</p></section>
+        <section class="review-card"><h2>Наши преимущества</h2><p>Быстрая доставка и гарантия качества.</p></section>
+        <section class="review-card">
+            <h2>Регистрация</h2>
+            <form>
+                <input type="email" placeholder="Email"><br><br>
+                <input type="password" placeholder="Пароль"><br><br>
+                <input type="password" placeholder="Повтор пароля"><br><br>
+                <button type="button" onclick="alert('Регистрация успешна!')">Зарегистрироваться</button>
             </form>
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="footer-logo">iSpace &copy; 2026</div>
-        <div class="footer-links">
-            <a href="index.html">Главная</a>
-            <a href="catalog.html">Каталог</a>
-            <a href="feedback.html">Отзывы</a>
-            <a href="akk.html">Кабинет</a>
-            <a href="help.html">Помощь</a>
-            <a href="#">Политика конфиденциальности</a>
-        </div>
-        <div class="socials">
-            <a href="#">ВКонтакте</a>
-            <a href="#">Telegram</a>
-            <a href="#">YouTube</a>
-        </div>
+    <footer>
+        <p>VK | TG | YT</p>
+        <p>Политика конфиденциальности</p>
     </footer>
 </body>
 </html>
